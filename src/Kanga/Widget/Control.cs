@@ -12,6 +12,7 @@ namespace Kanga.Widget
     public class Control
     {
 
+        //Properties
         public string Name
         {
             get; set;
@@ -21,6 +22,7 @@ namespace Kanga.Widget
         {
             get; set;
         }
+
         private Point size;
         public Point Size
         {
@@ -37,14 +39,16 @@ namespace Kanga.Widget
 
         //Events
         public event EventHandler<MouseEventArgs> OnClick;
+
         public event EventHandler Resize;
-        public event EventHandler<MouseEventArgs> OnClick;
+        public event EventHandler Move;
+
+        public event EventHandler Paint;
 
 
         public Control(string Name, Point Pos, Point Size)
         {
             
-
             this.Name = Name;
             this.Pos = Pos;
             this.Size = Size;
@@ -52,8 +56,11 @@ namespace Kanga.Widget
         }
         
 
-        public virtual void Tick()
+        public virtual void Draw()
         {
+
+            Paint(this, null);
+
         }
 
     }

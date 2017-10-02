@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.Net.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BinFormat>elf</BinFormat>
+    <Profile>VMware</Profile>
+    <DebugEnabled>true</DebugEnabled>
+    <DebugMode>Source</DebugMode>
+    <TraceMode>User</TraceMode>
+    <EnableGDB>False</EnableGDB>
+    <StartCosmosGDB>false</StartCosmosGDB>
+    <VMWareEdition>Player</VMWareEdition>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Description>Use VMware Player or Workstation to deploy and debug.</Description>
+    <Deployment>ISO</Deployment>
+    <Launch>VMware</Launch>
+    <VisualStudioDebugPort>Pipe: Cosmos\Serial</VisualStudioDebugPort>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="*" />
+    <None Remove="*.Cosmos" />
+    <Compile Remove="*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include=".\Kanga.HAL.csproj">
+      <Name>Kanga.HAL</Name>
+      <Project>{15f6238d-5dcc-4fb3-9274-5b434c4f285a}</Project>
+    </ProjectReference>
+  </ItemGroup>
+
+  <Import Project="$(AppData)\Cosmos User Kit\Build\VSIP\Cosmos.targets" />
+
+</Project>

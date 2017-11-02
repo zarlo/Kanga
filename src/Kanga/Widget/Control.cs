@@ -18,9 +18,18 @@ namespace Kanga.Widget
             get; set;
         }
 
+        private Point pos;
         public Point Pos
         {
-            get; set;
+            get
+            {
+                return pos;
+            }
+            set
+            {
+                pos = value;
+                Move(this, null);
+            }
         }
 
         private Point size;
@@ -42,9 +51,12 @@ namespace Kanga.Widget
 
         public event EventHandler Resize;
         public event EventHandler Move;
-
         public event EventHandler Paint;
 
+        public void InvokeOnClick(object e, MouseEventArgs mouseEventArgs)
+        {
+            OnClick(e, mouseEventArgs);
+        }
 
         public Control(string Name, Point Pos, Point Size)
         {
@@ -55,7 +67,6 @@ namespace Kanga.Widget
 
         }
         
-
         public virtual void Draw()
         {
 

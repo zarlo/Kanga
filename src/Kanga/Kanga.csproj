@@ -13,5 +13,9 @@
     <PackageReference Include="Cosmos.Debug.Kernel" Version="*" />
     <PackageReference Include="Cosmos.System2" Version="*" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Kanga.HAL\Kanga.HAL.csproj" />
+  </ItemGroup>
 
 </Project>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Cosmos.System.Graphics;
 
 namespace Kanga.Window
 {
@@ -17,15 +18,41 @@ namespace Kanga.Window
             get; protected set;
         }
 
-        public int Width
+        public event EventHandler Resize;
+        public event EventHandler Move;
+
+        private Point pos;
+        public Point Pos
         {
-            get; protected set;
+            get
+            {
+                return pos;
+            }
+            set
+            {
+                pos = value;
+                Move(this, null);
+            }
         }
 
-        public int Height
+        private Point size;
+        public Point Size
+        {
+            get
+            {
+                return size;
+            }
+            set
+            {
+                size = value;
+                Resize(this, null);
+            }
+        }
+
+        public WindowState WindowState
         {
             get; protected set;
-        }
+        } = WindowState.windowed;
 
         public BorderStyle BorderStyle
         {
@@ -39,17 +66,35 @@ namespace Kanga.Window
 
         public Window()
         {
+                        
+            Manager.AddWindow(this);
 
-            DesktopID = Manger.activeDesktop;
-
-            Manger.AddWindow(DesktopID, this);
+            this.Move += ReDraw;
+            this.Resize += ReDraw;
 
         }
 
-        public Window(string Name)
+        private void ReDraw(object sender, EventArgs e)
+        {
+            foreach (Widget.Control Item in Controls)
+            {
+
+                Item.Draw();
+
+            }
+        }
+
+        public Window(int Index)
         {
 
-            Manger.AddWindow(Name,this);
+            Manager.AddWindow(Index, this);
+
+        }
+
+        public Window(string DesktopName)
+        {
+
+            Manager.AddWindow(DesktopName, this);
 
         }
 

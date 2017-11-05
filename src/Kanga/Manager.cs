@@ -8,22 +8,28 @@ using Kanga.HAL;
 namespace Kanga
 {
     public class Manager
-    {
+    {     
 
-        static Canvas Canvas;
-
-        
-
-        public static int activeDesktop = 0;
+        static int activeDesktop = 0;
         static List<Window.Desktop> Desktop;
 
-        public static void Init()
+        public static void Init(Canvas Canvas = null)
         {
-            
-            Canvas = FullScreenCanvas.GetFullScreenCanvas();
-            HALProxy.Mouse = new Cosmos.HAL.Mouse();
-            HALProxy.Mouse.Initialize((uint) Canvas.Mode.Columns, (uint) Canvas.Mode.Rows);
+            if (Canvas == null)
+            {
 
+                GraphicsManager.Init(FullScreenCanvas.GetFullScreenCanvas());
+                
+            }
+            else
+            {
+
+                GraphicsManager.Init(Canvas);
+
+            }
+                HALProxy.Mouse = new Cosmos.HAL.Mouse();
+            HALProxy.Mouse.Initialize((uint) Canvas.Mode.Columns, (uint) Canvas.Mode.Rows);
+            
             Desktop = new List<Window.Desktop>();
             Desktop.Add(new Window.Desktop() { Name = "Main"});
             

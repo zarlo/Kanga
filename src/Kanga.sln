@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanga", "Kanga\Kanga.csproj", "{2ECE3F59-D781-486C-8775-3F15573B9B2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanga.HAL", "Kanga.HAL\Kanga.HAL.csproj", "{15F6238D-5DCC-4FB3-9274-5B434C4F285A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanga.HAL", "Kanga.HAL\Kanga.HAL.csproj", "{15F6238D-5DCC-4FB3-9274-5B434C4F285A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{810B8D4A-8B63-4159-A01E-1C634AB94661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanga.Test", "Kanga.Test\Kanga.Test.csproj", "{A45AD50C-83C5-4659-80B0-5D53572B4DD3}"
+EndProject
+Project("{471EC4BB-E47E-4229-A789-D1F5F83B52D4}") = "Kanga.TestBoot", "Kanga.Test\Kanga.TestBoot.Cosmos", "{7BE059ED-015E-454A-9B1F-07D85CB230C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,21 @@ Global
 		{15F6238D-5DCC-4FB3-9274-5B434C4F285A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15F6238D-5DCC-4FB3-9274-5B434C4F285A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15F6238D-5DCC-4FB3-9274-5B434C4F285A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A45AD50C-83C5-4659-80B0-5D53572B4DD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A45AD50C-83C5-4659-80B0-5D53572B4DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A45AD50C-83C5-4659-80B0-5D53572B4DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A45AD50C-83C5-4659-80B0-5D53572B4DD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE059ED-015E-454A-9B1F-07D85CB230C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE059ED-015E-454A-9B1F-07D85CB230C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE059ED-015E-454A-9B1F-07D85CB230C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE059ED-015E-454A-9B1F-07D85CB230C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A45AD50C-83C5-4659-80B0-5D53572B4DD3} = {810B8D4A-8B63-4159-A01E-1C634AB94661}
+		{7BE059ED-015E-454A-9B1F-07D85CB230C6} = {810B8D4A-8B63-4159-A01E-1C634AB94661}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {761D7CBE-0942-496F-BCE6-42F9314832A6}

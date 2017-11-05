@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.Net.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{a45ad50c-83c5-4659-80b0-5d53572b4dd3}</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Kanga.TestBoot.Cosmos" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Cosmos.Debug.Kernel" Version="*" />
+    <PackageReference Include="Cosmos.System2" Version="*" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Kanga\Kanga.csproj" />
+  </ItemGroup>
+
+</Project>

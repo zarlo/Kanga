@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanga_core", "src\Kanga_core\Kanga_core.csproj", "{E753C218-2C93-4B11-8DA9-0245563D4082}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanga_Windows", "src\Kanga_core\Kanga_Windows.csproj", "{26EB73C1-975E-427F-9036-F5345D7EC183}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanga_Aura", "src\Kanga_core\Kanga_Aura.csproj", "{1992A298-E272-4023-BAA3-2EC9375D138D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanga_Linux", "src\Kanga_core\Kanga_Linux.csproj", "{97ED5C7C-4DF9-4399-90B9-9A2A50CABFBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E753C218-2C93-4B11-8DA9-0245563D4082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E753C218-2C93-4B11-8DA9-0245563D4082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E753C218-2C93-4B11-8DA9-0245563D4082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E753C218-2C93-4B11-8DA9-0245563D4082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26EB73C1-975E-427F-9036-F5345D7EC183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26EB73C1-975E-427F-9036-F5345D7EC183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26EB73C1-975E-427F-9036-F5345D7EC183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26EB73C1-975E-427F-9036-F5345D7EC183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1992A298-E272-4023-BAA3-2EC9375D138D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1992A298-E272-4023-BAA3-2EC9375D138D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1992A298-E272-4023-BAA3-2EC9375D138D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1992A298-E272-4023-BAA3-2EC9375D138D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97ED5C7C-4DF9-4399-90B9-9A2A50CABFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97ED5C7C-4DF9-4399-90B9-9A2A50CABFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97ED5C7C-4DF9-4399-90B9-9A2A50CABFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97ED5C7C-4DF9-4399-90B9-9A2A50CABFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E32377DE-680B-4B16-B7EF-BA1A786EB224}
+	EndGlobalSection
+EndGlobal

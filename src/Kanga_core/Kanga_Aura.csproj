@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;Backend_Aura</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="LinuxBackend\**" />
+    <Compile Remove="WindowsBackend\**" />
+    <EmbeddedResource Remove="LinuxBackend\**" />
+    <EmbeddedResource Remove="WindowsBackend\**" />
+    <None Remove="LinuxBackend\**" />
+    <None Remove="WindowsBackend\**" />
+  </ItemGroup>
+
+
+  
+</Project>
